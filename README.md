@@ -1,24 +1,38 @@
 # shan-site
 
-Small static site for `shan.longvol.com`.
+Travel recommendation site for `shan.longvol.com`.
 
-## How it works
+## Stack
 
-This repo is intentionally plain HTML and CSS so it can be hosted directly from
-GitHub Pages without a build step.
+- React
+- Vite
+- Leaflet
+- OpenStreetMap
 
-## Update workflow
+## Local development
 
-1. Edit `index.html` or `styles.css`.
-2. Commit and push to `main`.
-3. GitHub Pages serves the latest version from the default branch.
+```bash
+npm install
+npm run dev
+```
 
-## GitHub Pages setup
+## Build
 
-In the repository settings:
+```bash
+npm run build
+```
 
-1. Open `Settings` -> `Pages`.
-2. Under `Build and deployment`, choose `Deploy from a branch`.
-3. Select branch `main` and folder `/ (root)`.
-4. Set the custom domain to `shan.longvol.com`.
-5. After DNS propagates, enable HTTPS.
+## Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+This publishes the Vite build output in `dist/` to the `gh-pages` branch.
+
+After the first deploy, GitHub Pages should be configured to publish from:
+
+- branch: `gh-pages`
+- folder: `/ (root)`
+
+The custom domain is preserved through `public/CNAME`.
